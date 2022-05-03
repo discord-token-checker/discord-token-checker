@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="assets/icon.ico" rel="icon">
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Discord Token Checker</title>
+
+    <!-- Css -->
+    <link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <ul>
+        <li><a href="https://github.com/GuFFy12/Discord-Token-Checker" target="_blank">Discord Token Checker</a></li>
+    </ul>
+</header>
+
+<section class="input_tokens" id="tokens_list">
+    <div class="center">
+        <label for="tokens"></label>
+        <textarea cols="30" id="tokens" name="tokens" placeholder="Enter Your Tokens Here (accept unparsed tokens)..." rows="10"></textarea>
+        <button onclick="CheckTokens()">Check Tokens</button>
+    </div>
+</section>
+
+<section class="hide" id="results">
+    <div class="result-box valid">
+        <div class="box-title">
+            <span>Valid Accounts</span>
+            <hr>
+        </div>
+        <div id="valid_tokens">
+
+        </div>
+    </div>
+    <div class="result-box unverified">
+        <div class="box-title">
+            <span>Unverified Accounts</span>
+            <hr>
+        </div>
+        <div id="unverified_tokens">
+
+        </div>
+    </div>
+    <div class="result-box invalid">
+        <div class="box-title">
+            <span>Invalid Accounts</span>
+            <hr>
+        </div>
+        <div id="invalid_tokens">
+
+        </div>
+    </div>
+</section>
+
+<!-- Javascript -->
+<script src="assets/app.js"></script>
+</body>
+</html>
