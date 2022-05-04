@@ -7,6 +7,13 @@
     <link href="assets/icon.ico" rel="icon">
     <title>Discord Token Checker</title>
 
+    <meta content="Discord Token Checker" property="og:title"/>
+    <meta content="website" property="og:type"/>
+    <meta content="https://discord-token-checker.github.io/discord-token-checker/" property="og:url"/>
+    <meta content="https://discord-token-checker.github.io/discord-token-checker/assets/thumb.png"
+          property="og:image:url"/>
+    <meta content="🔥Fastest Parallel Request Double-Check Discord Token Checker🔥" property="og:description"/>
+
     <link href="assets/style.css" rel="stylesheet">
 </head>
 <body>
@@ -20,14 +27,15 @@
 <section class="input_tokens" id="tokens_list">
     <div class="center">
         <label for="tokens"></label>
-        <textarea cols="30" id="tokens" name="tokens" placeholder="Enter Your Tokens Here (accept unparsed tokens)..." rows="10"></textarea>
+        <textarea cols="30" id="tokens" name="tokens" placeholder="Enter Your Tokens Here (accept unparsed tokens)..."
+                  rows="10"></textarea>
 
         <button onclick="checkTokens()">Check Tokens</button>
 
-        <label for="file" class="custom-file-upload">
+        <label class="custom-file-upload" for="file">
             Enter File
         </label>
-        <input hidden id="file" type="file" onchange="readFile()"/>
+        <input hidden id="file" onchange="readFile()" type="file"/>
 
     </div>
 </section>
