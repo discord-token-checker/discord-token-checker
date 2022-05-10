@@ -12,7 +12,8 @@
     <meta content="https://discord-token-checker.github.io/discord-token-checker/assets/thumb.png"
           property="og:image"/>
     <meta content="website" property="og:type"/>
-    <meta content="🔥Fastest Parallel Request Double-Check Discord Token Checker🔥 Parse discord tokens from any file and text." property="og:description"/>
+    <meta content="🔥Fastest Parallel Request Double-Check Discord Token Checker🔥 Parse discord tokens from any file and text."
+          property="og:description"/>
 
     <title>Discord Token Checker V2 by GuFFy_OwO</title>
     <meta content="Fastest Parallel Request Double-Check Discord Token Checker. Parse discord tokens from any file and text."
@@ -39,6 +40,35 @@
     </div>
 </section>
 
+<section class="hide" id="loading">
+    <div class="container">
+        <div class="wrapper">
+            <div class="loader">
+                <div class="dot"></div>
+            </div>
+            <div class="loader">
+                <div class="dot"></div>
+            </div>
+            <div class="loader">
+                <div class="dot"></div>
+            </div>
+            <div class="loader">
+                <div class="dot"></div>
+            </div>
+            <div class="loader">
+                <div class="dot"></div>
+            </div>
+            <div class="loader">
+                <div class="dot"></div>
+            </div>
+        </div>
+        <div class="text">
+            Please wait
+        </div>
+    </div>
+</section>
+
+
 <section class="hide" id="results">
     <div class="center">
         <button onclick="downloadOutput()">Download Tokens Data</button>
@@ -46,17 +76,17 @@
     </div>
     <table class="table" id="table">
         <thead>
-            <tr>
-                <th onclick="sortTable(0)">Type</th>
-                <th onclick="sortTable(1)">Username</th>
-                <th onclick="sortTable(2)">Locale</th>
-                <th onclick="sortTable(3)">Email</th>
-                <th onclick="sortTable(4)">Phone</th>
-                <th onclick="sortTable(5)">Nitro</th>
-                <th onclick="sortTable(6)">Payment</th>
-                <th onclick="sortTable(7)">ID</th>
-                <th onclick="sortTable(8)">Token</th>
-            </tr>
+        <tr>
+            <th onclick="sortTable(0)">Type</th>
+            <th onclick="sortTable(1)">Username</th>
+            <th onclick="sortTable(2)">Locale</th>
+            <th onclick="sortTable(3)">Email</th>
+            <th onclick="sortTable(4)">Phone</th>
+            <th onclick="sortTable(5)">Nitro</th>
+            <th onclick="sortTable(6)">Payment</th>
+            <th onclick="sortTable(7)">ID</th>
+            <th onclick="sortTable(8)">Token</th>
+        </tr>
         </thead>
         <tbody id="resultBody">
         </tbody>
