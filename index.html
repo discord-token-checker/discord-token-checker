@@ -5,26 +5,28 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="assets/icon.ico" rel="icon">
-    <title>Discord Token Checker</title>
+    <link href="assets/style.css" rel="stylesheet">
 
-    <meta content="Discord Token Checker" property="og:title"/>
-    <meta content="website" property="og:type"/>
+    <meta content="Discord Token Checker V2 by GuFFy_OwO" property="og:title"/>
     <meta content="https://discord-token-checker.github.io/discord-token-checker/" property="og:url"/>
     <meta content="https://discord-token-checker.github.io/discord-token-checker/assets/thumb.png"
-          property="og:image:url"/>
-    <meta content="🔥Fastest Parallel Request Double-Check Discord Token Checker🔥" property="og:description"/>
+          property="og:image"/>
+    <meta content="website" property="og:type"/>
+    <meta content="🔥Fastest Parallel Request Double-Check Discord Token Checker🔥 Parse discord tokens from any file and text." property="og:description"/>
 
-    <link href="assets/style.css" rel="stylesheet">
+    <title>Discord Token Checker V2 by GuFFy_OwO</title>
+    <meta content="Fastest Parallel Request Double-Check Discord Token Checker. Parse discord tokens from any file and text."
+          name="Description">
 </head>
-<body>
 
+<body>
 <header>
     <ul>
         <li><a href="https://github.com/GuFFy12/Discord-Token-Checker" target="_blank">Discord Token Checker</a></li>
     </ul>
 </header>
 
-<section class="input_tokens" id="tokens_list">
+<section class="input_tokens" id="input_tokens">
     <div class="center">
         <label for="tokens"></label>
         <textarea cols="30" id="tokens" name="tokens" placeholder="Enter Your Tokens Here (accept unparsed tokens)..."
@@ -32,42 +34,33 @@
 
         <button onclick="checkTokens()">Check Tokens</button>
 
-        <label class="custom-file-upload" for="file">
-            Enter File
-        </label>
-        <input hidden id="file" onchange="readFile()" type="file"/>
-
+        <label class="fileLabel" for="file">Choose File</label>
+        <input hidden id="file" name="file" onchange="readFile()" type="file">
     </div>
 </section>
 
 <section class="hide" id="results">
-    <div class="result-box valid">
-        <div class="box-title">
-            <span>Valid Accounts</span>
-            <hr>
-        </div>
-        <div id="valid_tokens">
-
-        </div>
+    <div class="center">
+        <button onclick="downloadOutput()">Download Tokens Data</button>
+        <button onclick="exportTableToExcel()">Download Excel Table</button>
     </div>
-    <div class="result-box unverified">
-        <div class="box-title">
-            <span>Unverified Accounts</span>
-            <hr>
-        </div>
-        <div id="unverified_tokens">
-
-        </div>
-    </div>
-    <div class="result-box invalid">
-        <div class="box-title">
-            <span>Invalid Accounts</span>
-            <hr>
-        </div>
-        <div id="invalid_tokens">
-
-        </div>
-    </div>
+    <table class="table" id="table">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Type</th>
+                <th onclick="sortTable(1)">Username</th>
+                <th onclick="sortTable(2)">Locale</th>
+                <th onclick="sortTable(3)">Email</th>
+                <th onclick="sortTable(4)">Phone</th>
+                <th onclick="sortTable(5)">Nitro</th>
+                <th onclick="sortTable(6)">Payment</th>
+                <th onclick="sortTable(7)">ID</th>
+                <th onclick="sortTable(8)">Token</th>
+            </tr>
+        </thead>
+        <tbody id="resultBody">
+        </tbody>
+    </table>
 </section>
 
 <script src="assets/app.js"></script>
